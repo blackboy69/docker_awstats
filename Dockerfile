@@ -28,7 +28,7 @@ RUN apk add --no-cache gettext \
     && rm -rf ./mod_perl-${MOD_PERL_VERSION}* \
     && apk del --no-cache .build-dependencies
 
-ARG TZDATA_VERSION=2025a-r0
+ARG TZDATA_VERSION=2025b-r0
 ARG AWSTATS_VERSION=7.9-r0
 
 RUN apk add --no-cache awstats=${AWSTATS_VERSION} tzdata=${TZDATA_VERSION} \
