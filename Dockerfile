@@ -46,6 +46,8 @@ COPY awstats_env.conf /etc/awstats/
 COPY awstats_httpd_env.conf /usr/local/apache2/conf/
 COPY entrypoint.sh /usr/local/bin/
 
+ENV AWSTATS_CONF_DNSLOOKUP 2
+ENV AWSTATS_CONF_DYNAMIC_DNSLOOKUP 0
 ENV AWSTATS_CONF_ALLOWFULLYEARVIEW=2
 ENV AWSTATS_CONF_HOSTALIASES="localhost 127.0.0.1 REGEX[^.*$]"
 ENV AWSTATS_CONF_INCLUDE="."
